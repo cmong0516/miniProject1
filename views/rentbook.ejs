@@ -63,13 +63,13 @@
                 </tr>
             </thead>
             <tbody>
-                <% for (let i=1; i < members[1].rent.length; i ++) { %>
+                <% for (let i=0; i < members.rent.length; i ++) { %>
                     <tr>
                         <th>
-                            <%= i %>
+                            <%= i+1 %>
                         </th>
                         <th>
-                            <%= members[1].rent[i] %>
+                            <%= members.rent[i] %>
                         </th>
 
                     </tr>

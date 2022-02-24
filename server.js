@@ -66,8 +66,8 @@ app.post("/memberadd", function (req, res) {
       name: req.body.userName,
       id: req.body.userId,
       pw: req.body.userPassword,
-      done: [{}],
-      rent: [{}],
+      done: [],
+      rent: [],
     },
     function (error, result) {
       res.redirect("/");
@@ -141,19 +141,18 @@ app.get("/member", login, (req, res) => {
 
 app.get("/rentbook", login, (req, res) => {
   db.collection("login")
-    .find({}, { _id: user_id })
+    .find({ _id: user_id })
     .toArray(function (error, result) {
-      res.render("rentbook.ejs", { members: result, name: name });
+      res.render("rentbook.ejs", { members: result[0], name: name });
     });
 });
 
 app.get("/complit", login, (req, res) => {
   db.collection("login")
-    .find({}, { _id: user_id })
+    .find({ name: name })
     .toArray(function (error, result) {
-      console.log(result);
       res.render("complit.ejs", {
-        members: result,
+        members: result[0],
         name: name,
       });
     });
@@ -163,7 +162,6 @@ app.post("/rent", login, (req, res) => {
   db.collection("login")
     .find({}, { _id: user_id })
     .toArray(function (error, result) {
-      console.log(req.body.bookname);
       db.collection("login").updateOne(
         {
           _id: user_id,
@@ -177,7 +175,6 @@ app.post("/readed", login, (req, res) => {
   db.collection("login")
     .find({}, { _id: user_id })
     .toArray(function (error, result) {
-      console.log(req.body.bookname);
       db.collection("login").updateOne(
         {
           _id: user_id,
