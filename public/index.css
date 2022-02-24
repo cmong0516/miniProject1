@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-expand-lg {
+  width: 70vw;
+}
+
+.header_buttons {
+  margin: 2em;
+  display: flex;
+}
+
+.header_buttons button {
+  margin: 0.3em;
+}
+
+.title {
+  text-align: center;
+  padding: 1em;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  height: 60vh;
+}
+
+.form {
+  width: 30vw;
+}
+
+input {
+  width: 60%;
+  padding: 6px;
+}
+
+form > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  flex: 1;
+  text-align: left;
+}
+
+form .buttons button {
+  width: 80px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.buttons {
+  width: 220px;
+  margin-left: 12vw;
+  display: flex;
+}
+
+.buttons button {
+  margin: 0em 1em;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.loginForm div {
+  padding: 10px;
+}
+
+#searchPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.booksearch {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.booksearch button {
+  margin: 1em;
+}
+
+#searchedBook div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#searchedBook div div {
+  padding: 2em;
+  flex-direction: column;
+  width: 30vw;
+}
+
+#searchedBook div div img {
+  width: 300px;
+}
+
+#searchedBook div div div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#searchedBook button {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.bestTable {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+
+#searchedBook h1 {
+  text-align: center;
+}
+
+.table thead a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#searchedBook a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#searchedBook a:hover {
+  color: blue;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.indexMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.indexMain :nth-child(2) {
+  margin-top: 2em;
+}
+
+.rentTable {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
